@@ -1,1 +1,45 @@
 
+body {
+
+    background-color: orange;
+
+}
+
+#list {
+
+    background-color: lavender;
+    font-size: 25px;
+    font-family:cursive;
+    border: purple;
+    border-style: solid;
+
+}
+    
+    #list input[type="checkbox"]:checked + label {
+        background-color: crimson;
+    }
+
+
+
+#submit {
+    background-color: chartreuse;
+    border-radius: 10px;
+}
+
+#input {
+    background-color: chartreuse;
+    border: darkgreen;
+    border-width: medium;
+    border-radius: 10px;
+    border-style: solid;
+
+
+}
+
+li {
+    /* input:checked {
+        background-color: crimson;
+    } */
+    
+
+}
