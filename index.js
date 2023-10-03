@@ -10,10 +10,13 @@ function addItem(){
 
     if(input2 !== null && input2 !== ''){
         let newItem = document.createElement('li');
+        let newCheckbox = document.createElement('input');
+            newCheckbox.type = 'checkbox';
         newItem.textContent = input2;
         console.log("newItem", newItem);
         console.log('list', list);
         list.appendChild(newItem);
+        newItem.appendChild(newCheckbox);
         input.value = "";
         
     }
