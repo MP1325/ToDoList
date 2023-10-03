@@ -17,12 +17,6 @@ body {
     border-style: solid;
 
 }
-    
-    #list input[type="checkbox"]:checked + label {
-        text-decoration: line-through;
-    }
-
-
 
 #submit {
     background-color: chartreuse;
@@ -39,10 +33,11 @@ body {
 
 }
 
-li {
-    /* input:checked {
-        background-color: crimson;
-    } */
+#completed{
     
-
+    background-color: lavender;
+    font-size: 25px;
+    font-family:cursive;
+    border: purple;
+    border-style: solid;
 }

@@ -3,9 +3,17 @@ console.log('Hello');
 let button = document.querySelector('#submit');
 let input = document.querySelector('#input');
 let list = document.getElementById('list');
+localStorage.clear();
+let storedValues = localStorage.getItem('items') ?
+JSON.parse(localStorage.getItem('items')) : [];
 
+console.log(storedValues);
+storedValues.forEach(addItem);
+console.log(storedValues.forEach(addItem));
 
 function addItem(){
+    storedValues.push(input.value);
+    console.log('input.value:', input.value)
     let input2 = input.value;
 
     if(input2 !== "" && input2 !== null){
@@ -29,8 +37,12 @@ function addItem(){
 
         newCheckbox.addEventListener('change', function(){
             label.style.textDecoration = newCheckbox.checked
+            completed.appendChild(newItem)
         });
+       
     }
+    
+    localStorage.setItem('items', JSON.stringify(storedValues));
 }
 
 button.addEventListener('click', addItem)
@@ -40,3 +52,4 @@ input.addEventListener('keyup', function (event) {
         addItem();
     }
 })
+
